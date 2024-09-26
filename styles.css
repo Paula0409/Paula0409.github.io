@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10px;
 }
 
 .container {
@@ -102,14 +103,14 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 500px;  /* Ajustar para pantallas más grandes */
+    max-width: 500px;
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    word-wrap: break-word;  /* Asegura que las palabras largas se ajusten */
+    word-wrap: break-word;
     overflow: hidden;
 }
 
@@ -120,7 +121,7 @@ ul {
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 0;
-    overflow-wrap: break-word; /* Permite que el texto largo se divida en varias líneas */
+    overflow-wrap: break-word;
 }
 
 /* Estilo del título */
@@ -166,4 +167,61 @@ ul {
     background-color: #2980b9;
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad para pantallas pequeñas como móviles */
+@media (max-width: 600px) {
+    .book {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .timeline-item {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .timeline-item h2 {
+        font-size: 18px;
+    }
+
+    .timeline-item ul {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Responsividad para tabletas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .book {
+        width: 75%;
+        height: auto;
+        padding: 25px;
+    }
+
+    .timeline-item {
+        max-width: 90%;
+    }
+
+    .timeline-item h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }
